@@ -1,6 +1,5 @@
 package net.d4.d4lib.io.nettys;
 
-import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
@@ -11,7 +10,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import net.d4.d4lib.io.nettys.http.handler.IHttpPathHandler;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import net.d4.d4lib.structs.ObjectGlobal;
 import net.d4.d4lib.thread.ThreadManager;
 import net.d4.d4lib.thread.ThreadModel;
@@ -21,7 +22,7 @@ import net.d4.d4lib.thread.ThreadModel;
  */
 public class NettyPool {
 
-    private static final Logger log = Logger.getLogger(NettyPool.class);
+    private static final Logger log = LoggerFactory.getLogger(NettyPool.class);
 
     private static final NettyPool instance = new NettyPool();
     private final ArrayList<NettyTcpServer> tcpServers = new ArrayList<>();
@@ -176,7 +177,7 @@ public class NettyPool {
                             taskQueue.wait(500);
                         }
                     } catch (InterruptedException ie) {
-                        log.error(ie);
+                        log.error(ie.toString());
                     }
                 }
                 synchronized (taskQueue) {

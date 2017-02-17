@@ -2,7 +2,8 @@ package net.d4.d4lib.timer;
 
 import java.util.Calendar;
 import java.util.Iterator;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import net.d4.d4lib.scriptpool.ScriptLoader;
 import net.d4.d4lib.thread.TimerTaskModel;
 import net.d4.d4lib.timer.script.IMinuteEventTimerScript;
@@ -14,7 +15,7 @@ import net.d4.d4lib.timer.script.ISecondsEventTimerScript;
  */
 public class GlobTimerEvent extends TimerTaskModel {
 
-    private static final Logger log = Logger.getLogger(GlobTimerEvent.class);
+    private static final Logger log = LoggerFactory.getLogger(GlobTimerEvent.class);
     int second = -1;
     int minute = -1;
     int hour = -1;

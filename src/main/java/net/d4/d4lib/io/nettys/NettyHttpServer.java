@@ -13,7 +13,9 @@ import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.codec.http.HttpServerCodec;
 import java.util.HashMap;
 import net.d4.d4lib.io.nettys.http.handler.IHttpPathHandler;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -21,7 +23,7 @@ import org.apache.log4j.Logger;
  */
 class NettyHttpServer {
 
-    private static Logger log = Logger.getLogger(NettyHttpServer.class);
+    private static Logger log = LoggerFactory.getLogger(NettyHttpServer.class);
 
     private int PORT;
     //private static MessageLite lite=AddressBookProtos.AddressBook.getDefaultInstance();

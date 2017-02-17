@@ -3,7 +3,8 @@ package net.d4.d4lib.thread;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 线程模型
@@ -12,7 +13,7 @@ import org.apache.log4j.Logger;
  */
 public class ThreadModel extends Thread {
 
-    private static final Logger log = Logger.getLogger(ThreadModel.class);
+    private static final Logger log = LoggerFactory.getLogger(ThreadModel.class);
     private static int threadID = 0;
     private static final Object SYN_OBJECT = new Object();
     private TimerRun timerRun;
@@ -168,7 +169,7 @@ public class ThreadModel extends Thread {
                         taskQueue.wait(500);
                     }
                 } catch (InterruptedException ie) {
-                    log.error(ie);
+                    log.error(ie.toString());
                 }
             }
             synchronized (taskQueue) {

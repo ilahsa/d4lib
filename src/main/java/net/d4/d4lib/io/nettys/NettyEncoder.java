@@ -10,14 +10,15 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 import java.nio.ByteOrder;
-import org.apache.log4j.Logger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * 编码器
  */
 class NettyEncoder extends MessageToByteEncoder<NettyMessageBean> {
 
-    private static final Logger logger = Logger.getLogger(NettyEncoder.class);
+    private static final Logger logger = LoggerFactory.getLogger(NettyEncoder.class);
     ByteOrder endianOrder = ByteOrder.LITTLE_ENDIAN;
 
     public NettyEncoder() {

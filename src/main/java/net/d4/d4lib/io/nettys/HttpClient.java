@@ -8,7 +8,9 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 用来主动发起HTTP请求的类
@@ -17,7 +19,7 @@ import org.apache.log4j.Logger;
  */
 public class HttpClient {
 
-    private static Logger log = Logger.getLogger(HttpClient.class);
+    private static Logger log = LoggerFactory.getLogger(HttpClient.class);
 
     public enum HTTPMethod {
 

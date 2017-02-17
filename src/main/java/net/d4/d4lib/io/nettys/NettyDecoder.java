@@ -7,14 +7,16 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 解码器
  */
 class NettyDecoder extends ByteToMessageDecoder {
 
-    private static final Logger logger = Logger.getLogger(NettyDecoder.class);
+    private static final Logger logger = LoggerFactory.getLogger(NettyDecoder.class);
 
     private byte ZreoByteCount = 0;
     private ByteBuf bytes;

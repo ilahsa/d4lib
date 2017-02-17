@@ -10,7 +10,10 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import java.util.UUID;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * 基于 netty 4.0.21 的 netty 服务
@@ -18,7 +21,7 @@ import org.apache.log4j.Logger;
  */
 class NettyTcpServer {
 
-    private static final Logger log = Logger.getLogger(NettyTcpServer.class);
+    private static final Logger log = LoggerFactory.getLogger(NettyTcpServer.class);
     private int port = 9527;
 
     //ServerBootstrap是设置服务器的辅助类

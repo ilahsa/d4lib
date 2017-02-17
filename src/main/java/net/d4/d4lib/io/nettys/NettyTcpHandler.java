@@ -3,8 +3,9 @@ package net.d4.d4lib.io.nettys;
 import com.google.protobuf.Message;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
-import net.d4.d4lib.structs.BaseObject;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import net.d4.d4lib.thread.TaskModel;
 
 /**
@@ -12,8 +13,8 @@ import net.d4.d4lib.thread.TaskModel;
  */
 public abstract class NettyTcpHandler extends TaskModel {
 
-    private static final Logger log = Logger.getLogger(NettyTcpHandler.class);
-    public static final AttributeKey<Boolean> BooleanKey = new AttributeKey<>("");
+    private static final Logger log = LoggerFactory.getLogger(NettyTcpHandler.class);
+    public static final AttributeKey<Boolean> BooleanKey = new AttributeKey<Boolean>("");
     private ChannelHandlerContext ioSession;
     private Message message;
 

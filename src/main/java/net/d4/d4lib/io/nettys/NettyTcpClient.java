@@ -12,14 +12,16 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import java.util.UUID;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  */
 public class NettyTcpClient {
 
-    private static final Logger log = Logger.getLogger(NettyTcpClient.class);
+    private static final Logger log = LoggerFactory.getLogger(NettyTcpClient.class);
 
     private String Host = "127.0.0.1";
     private int Port = 9527;

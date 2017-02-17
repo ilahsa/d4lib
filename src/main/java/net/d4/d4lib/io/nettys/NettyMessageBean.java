@@ -1,7 +1,9 @@
 package net.d4.d4lib.io.nettys;
 
 import io.netty.channel.ChannelHandlerContext;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -9,7 +11,7 @@ import org.apache.log4j.Logger;
  */
 public class NettyMessageBean {
 
-    private static final Logger log = Logger.getLogger(NettyMessageBean.class);
+    private static final Logger log = LoggerFactory.getLogger(NettyMessageBean.class);
 
     private ChannelHandlerContext channelHandlerContext;
     private int msgid;

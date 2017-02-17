@@ -23,12 +23,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import net.d4.d4lib.io.nettys.http.handler.IHttpPathHandler;
 
 public class HttpServerHandler extends SimpleChannelInboundHandler<Object> {
 
-    private static Logger log = Logger.getLogger(HttpServerHandler.class);
+    private static Logger log = LoggerFactory.getLogger(HttpServerHandler.class);
     private static final HttpDataFactory factory = new DefaultHttpDataFactory(DefaultHttpDataFactory.MINSIZE); //Disk
     private HashMap<String, IHttpPathHandler> handlerMap;
 
@@ -38,7 +40,7 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<Object> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        log.error(cause);
+        log.error(cause.toString());
     }
 
     @Override

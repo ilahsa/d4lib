@@ -11,15 +11,15 @@ import io.netty.handler.codec.http.HttpVersion;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
-import org.apache.log4j.Logger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  *
  */
 public class HttpRequestMessage {
 
-    private static final Logger log = Logger.getLogger(HttpRequestMessage.class);
+    private static final Logger log = LoggerFactory.getLogger(HttpRequestMessage.class);
 
     public enum HTTPContentType {
 
