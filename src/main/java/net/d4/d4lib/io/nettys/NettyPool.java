@@ -18,7 +18,6 @@ import net.d4.d4lib.thread.ThreadModel;
 
 /**
  *
- * @author Troy.Chen
  */
 public class NettyPool {
 

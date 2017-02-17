@@ -5,7 +5,6 @@ import java.util.ArrayList;
 /**
  * 封装的HTTP响应对象
  *
- * @author Ajita
  */
 public class HttpRespons {
 

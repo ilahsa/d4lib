@@ -9,7 +9,6 @@ import net.d4.d4lib.thread.TaskModel;
 
 /**
  *
- * @author Troy.Chen
  */
 public abstract class NettyTcpHandler extends TaskModel {
 
