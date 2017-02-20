@@ -2,6 +2,7 @@ package net.d4.d4lib.utils;
 
 /**
  * 原子级别操作
+ * 可以使用 java.util.concurrent.atomic
  */
 public class AtomUtil {
 

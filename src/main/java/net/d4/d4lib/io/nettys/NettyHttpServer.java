@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  *
  *
  */
-class NettyHttpServer {
+public class NettyHttpServer {
 
     private static Logger log = LoggerFactory.getLogger(NettyHttpServer.class);
 
@@ -109,4 +109,9 @@ class NettyHttpServer {
 
         NettyHttpServer server = new NettyHttpServer(8080, binds);
     }
+
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
 }
